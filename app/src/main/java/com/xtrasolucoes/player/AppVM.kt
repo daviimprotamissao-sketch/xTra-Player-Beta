@@ -105,5 +105,5 @@ class AppVM(app: Application) : AndroidViewModel(app) {
     fun locked(adult: Boolean) = adult && parental && hasPin && profile?.kids != true && !unlocked
     fun checkPin(pin: String) = pin == store.pin
     fun setPin(pin: String) { store.pin = pin; hasPin = pin.isNotEmpty() }
-    fun setParental(v: Boolean) { parental = v; store.parental = v }
+    fun updateParental(v: Boolean) { parental = v; store.parental = v }
 }
